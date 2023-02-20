@@ -9,4 +9,4 @@
 
 <h3>Сборка</h3> 
 
-- Запустите файл Saber.Calc.py
+- Запустите файл Saber.Calc.py или Saber.Calc.exe
