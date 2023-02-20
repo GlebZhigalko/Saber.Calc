@@ -38,3 +38,16 @@ class MyFrame(wx.Frame):  # Создан класс с наследование�
         vbox.Add(gbox, proportion=1, flag=wx.EXPAND | wx.ALL, border=10)
         panel.SetSizer(vbox)
         self.Bind(wx.EVT_BUTTON, self.OnClicked)  # Создана связь кнопка c функцией
+
+    # Создана функция для нажатий кнопок
+    def OnClicked(self, evt):
+        label = evt.GetEventObject().GetLabel()
+
+        if label == '=':
+            compute = self.txtCtrl.GetValue()  # Выражение берется из поля ввода
+            if not compute.strip():
+                return
+
+            result = eval(compute)  # Подсчитывается полученное выражение
+            self.txtCtrl.Insert(compute, 0)
+            self.txtCtrl.SetValue(str(result))
