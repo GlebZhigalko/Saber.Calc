@@ -9,5 +9,5 @@
 
 <h3>Сборка</h3> 
 
-- Склонируйте репозиторий: git clone https://github.com/GlebZhigalko/saber.calc
+- Склонируйте репозиторий: git clone https://github.com/GlebZhigalko/saber.calc.git
 - Запустите файл Saber.Calc.py
