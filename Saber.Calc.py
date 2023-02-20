@@ -51,3 +51,20 @@ class MyFrame(wx.Frame):  # Создан класс с наследование�
             result = eval(compute)  # Подсчитывается полученное выражение
             self.txtCtrl.Insert(compute, 0)
             self.txtCtrl.SetValue(str(result))
+
+        elif label == 'C':
+            self.txtCtrl.SetValue("")  # Удаляется вся строка все
+        elif label == '<-':
+            self.txtCtrl.SetValue(self.txtCtrl.GetValue()[:-1])  # Чистим последний символ в string
+        elif label == 'Close':
+            frame.Destroy()  # Закрывается окно
+        else:
+            self.txtCtrl.SetValue(self.txtCtrl.GetValue() + label)
+
+
+# Создание окна
+app = wx.App()
+frame = MyFrame(None, 'Saber.Calc')
+frame.Show()
+app.MainLoop()
+
